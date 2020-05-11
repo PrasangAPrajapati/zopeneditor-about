@@ -21,6 +21,10 @@ spec:
   - image: "quay.io/eclipse/che-sidecar-node:10-0cb5d78"
     name: vscode-node-zowe
     memoryLimit: '512Mi'
+    args:
+      - sh
+      - -c
+      - ${PLUGIN_REMOTE_ENDPOINT_EXECUTABLE}
     volumes:
     - mountPath: "/home/theia/.zowe"
       name: ibmzowe
