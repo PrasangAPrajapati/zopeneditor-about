@@ -21,7 +21,7 @@
       alias: ibm-z-open-editor
     -
       type: chePlugin
-      reference: https://raw.githubusercontent.com/ibm/zopeneditor-about/master/che/plugins/zowe.yaml
+      reference: https://raw.githubusercontent.com/PrasangAPrajapati/zopeneditor-about/master/che/plugins/zowe.yaml
       alias: zowe
     -
       type: dockerimage
