@@ -5,28 +5,28 @@
 # Use, duplication or disclosure restricted by GSA ADP Schedule
 # Contract with IBM Corp.
 ---
-apiVersion: 1.0.0
-metadata:
+  apiVersion: 1.0.0
+  metadata:
     generateName: IBM-Z-Open-Editor-
-projects:
+  projects:
     -
-    name: ibm-zopeneditor-sample
-    source:
+      name: ibm-zopeneditor-sample
+      source:
         type: git
         location: "https://github.com/IBM/zopeneditor-sample.git"
-components:
+  components:
     -
-    type: chePlugin
-    reference: https://raw.github.ibm.com/Zowe-Commercial/zopeneditor-about/update-stack/che/plugins/z-open-editor.yaml
-    alias: ibm-z-open-editor
+      type: chePlugin
+      reference: https://raw.github.ibm.com/Zowe-Commercial/zopeneditor-about/update-stack/che/plugins/z-open-editor.yaml
+      alias: ibm-z-open-editor
     -
-    type: dockerimage
-    alias: wazi
-    image: docker.io/ibmcom/wazi-code-codeready:latest
-    memoryLimit: 512Mi
-    volumes:
+      type: dockerimage
+      alias: wazi
+      image: docker.io/ibmcom/wazi-code-codeready:latest
+      memoryLimit: 512Mi
+      volumes:
         - name: wazi
-        containerPath: /home/wazi/.zowe
+          containerPath: /home/wazi/.zowe
         - name: m2
-        containerPath: /home/wazi/.m2
-    mountSources: true
+          containerPath: /home/wazi/.m2
+      mountSources: true
